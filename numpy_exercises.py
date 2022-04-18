@@ -173,16 +173,28 @@ c_array_characteristics = [np.min(c), np.max(c), np.sum(c), np.prod(c)]
 stddev_of_c = np.std(c)
 
 # Exercise 3 - Determine the variance of c.
+variance_of_c = np.var(c)
 
 # Exercise 4 - Print out the shape of the array c
+shape_of_c = np.shape(c)
 
 # Exercise 5 - Transpose c and print out transposed result.
+transpose_of_c = np.transpose(c)
+  # [[1 4 7]
+  #  [2 5 8]
+  #  [3 6 9]]
 
 # Exercise 6 - Get the dot product of the array c with c. 
+dot_prod_of_c = np.dot(c,c)
 
 # Exercise 7 - Write the code necessary to sum up the result of c times c transposed. Answer should be 261
+c_transpose_sum_of_c = (np.array(c) * np.tranpose(c)).sum()
 
 # Exercise 8 - Write the code necessary to determine the product of c times c transposed. Answer should be 131681894400.
+c_transpose_prod_of_c = (np.array(c) * np.tranpose(c)).prod()
+
+
+#~~~~~~~~~~
 
 
 ## Setup 4
@@ -193,21 +205,32 @@ d = [
 ]
 
 # Exercise 1 - Find the sine of all the numbers in d
+sin_of_d = np.sin(d)
 
 # Exercise 2 - Find the cosine of all the numbers in d
+cos_of_d = np.cos(d)
 
 # Exercise 3 - Find the tangent of all the numbers in d
+tan_of_d = np.tan(d)
 
 # Exercise 4 - Find all the negative numbers in d
+neg_in_d = np.array(d)[np.array(d) < 0]
 
 # Exercise 5 - Find all the positive numbers in d
+pos_in_d = np.array(d)[np.array(d) > 0]
 
 # Exercise 6 - Return an array of only the unique numbers in d.
+unique_in_d = np.unique(d)
 
 # Exercise 7 - Determine how many unique numbers there are in d.
+unique_q_in_d = len(np.unique(d))
 
 # Exercise 8 - Print out the shape of d.
+shape_of_d = np.shape(d)
 
 # Exercise 9 - Transpose and then print out the shape of d.
+tranpose_of_d = np.transpose(d)
+shape_of_tranposed_d = np.shape(np.transpose(d))
 
 # Exercise 10 - Reshape d into an array of 9 x 2
+reshape9x2_d = np.reshape(d,(9,2))
