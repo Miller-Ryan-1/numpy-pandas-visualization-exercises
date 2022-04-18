@@ -44,33 +44,66 @@ print(z_scores)
 
  #8. More numpy exercises:
  ## Setup 1
-a2 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+a2 = [1,2,3,4,5,6,7,8,9,10]
+a2np = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 # Note: used 'a2' to distnguish it from variable 'a' used earlier
 
 # Use python's built in functionality/operators to determine the following:
 # Exercise 1 - Make a variable called sum_of_a to hold the sum of all the numbers in above list
-sum_of_a2 = a2.sum()
+sum_of_a = 0
+for n in a2:
+    sum_of_a += n
+ #or
+sum_of_a2 = a2np.sum()
 
 # Exercise 2 - Make a variable named min_of_a to hold the minimum of all the numbers in the above list
-min_of_a2 = a2.min()
+min_of_a = a2[0]
+for n in a2:
+    if n < min_of_a:
+        min_of_a = n
+ #or
+min_of_a2 = a2np.min()
 
 # Exercise 3 - Make a variable named max_of_a to hold the max number of all the numbers in the above list
-max_of_a2 = a2.max()
+max_of_a = 0
+for n in a2:
+    if n > max_of_a:
+        max_of_a = n
+ #or
+max_of_a2 = a2np.max()
 
 # Exercise 4 - Make a variable named mean_of_a to hold the average of all the numbers in the above list
-mean_of_a2 = a2.mean()
+mean_of_a2 = sum_ofa2/len(a2)
+ #or
+mean_of_a2 = a2np.mean()
 
 # Exercise 5 - Make a variable named product_of_a to hold the product of multiplying all the numbers in the above list together
-product_of_a2 = a2.prod()
+product_of_a2 = 1
+for n in a2:
+    product_of_a2 *= n
+ #or
+product_of_a2 = a2np.prod()
 
 # Exercise 6 - Make a variable named squares_of_a. It should hold each number in a squared like [1, 4, 9, 16, 25...]
-squares_of_a2 = a2**2
+squares_of_a2 = [n**2 for n in a2]
+ #or
+squares_of_a2 = a2np**2
 
 # Exercise 7 - Make a variable named odds_in_a. It should hold only the odd numbers
-odds_in_a2 = a2[a2 % 2 == 1]
+odds_in_a2 = []
+for n in a2:
+    if n % 2 == 1:
+        odds_in_a2.append(n)
+ #or
+odds_in_a2 = a2np[a2np % 2 == 1]
 
 # Exercise 8 - Make a variable named evens_in_a. It should hold only the evens.
-evens_in_a2 = a2[a2 % 2 == 0]
+evens_in_a2 = []
+for n in a2:
+    if n % 2 == 0:
+        evens_in_a2.append(n)
+ #or
+evens_in_a2 = a2[a2np % 2 == 0]
 
 
 #~~~~~~~~~~
